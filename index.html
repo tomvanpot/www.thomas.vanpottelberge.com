@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // Run as early as possible (before any layout/paint) so a refresh never
+  // lands mid-page: some browsers restore the previous scroll position on
+  // reload, which is what causes the intermittent "starts from the bottom"
+  // behavior. Take manual control and force the top, unless the URL itself
+  // targets a specific section.
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+</script>
+<title id="pageTitle">Thomas Van Pottelberge — Chef opérateur du son · Monteur son</title>
+<meta id="pageDescription" name="description" content="Thomas Van Pottelberge, chef opérateur du son et monteur son pour le cinéma et le documentaire. Little Jaffna, Les Meutes, Freda.">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__id">
+    <a href="#top" id="navNameLink" class="nav__name">Thomas Van Pottelberge</a>
+    <span class="nav__role" data-en="Production Sound Mixer · Sound Editor">Chef opérateur du son · Monteur son</span>
+  </div>
+  <nav class="nav__links">
+    <a href="#top" id="navFilmsLink">Films</a>
+    <a href="#apropos" data-en="About">À propos</a>
+    <a href="#filmo">CV</a>
+    <div class="nav__lang" role="group" aria-label="Langue du site / Site language">
+      <button type="button" class="nav__lang-btn is-active" data-lang="fr">FR</button>
+      <span class="nav__lang-sep">/</span>
+      <button type="button" class="nav__lang-btn" data-lang="en">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="hero__content">
+      <div class="hero__categories" role="tablist">
+        <button type="button" class="hero__category is-active" data-category="cinema" role="tab" aria-selected="true" data-en="Cinema">Cinéma</button>
+        <button type="button" class="hero__category hero__category--white" data-category="docs" role="tab" aria-selected="false" data-en="Documentaries">Documentaires</button>
+        <button type="button" class="hero__category hero__category--white" data-category="series" role="tab" aria-selected="false" data-en="Series">Séries</button>
+        <button type="button" class="hero__category hero__category--white" data-category="clips" role="tab" aria-selected="false" data-en="Music Videos">Clips</button>
+      </div>
+      <div class="hero__tabs-wrapper">
+        <div class="hero__tabs" data-owner="cinema" role="tablist">
+          <button type="button" class="hero__tab is-active" data-target="wall-longs" role="tab" aria-selected="true" data-en="Feature Films">Longs-métrages</button>
+          <button type="button" class="hero__tab" data-target="wall-courts" role="tab" aria-selected="false" data-en="Short Films">Courts-métrages</button>
+        </div>
+        <div class="hero__tabs" data-owner="docs" role="tablist" hidden>
+          <button type="button" class="hero__tab" data-target="wall-docs-series" role="tab" aria-selected="false" data-en="Series">Séries</button>
+          <button type="button" class="hero__tab" data-target="wall-docs-unitaire" role="tab" aria-selected="false" data-en="Standalone">Unitaires</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__panel" data-panel="cinema">
+      <div class="poster-wall" id="wall-longs">
+        <a href="https://www.youtube.com/watch?v=crsx7_2vrn0" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/little-jaffna-poster.jpg" alt="Affiche Little Jaffna" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=aMZj--wF9ko" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/les-meutes-poster.jpg" alt="Affiche Les Meutes" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=SK2BaJHtT9s" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/freda-poster.jpg" alt="Affiche Freda" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=mextUdIDi_E" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/le-barrage-poster.jpg" alt="Affiche Le Barrage" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=hY4QaI8wxOk" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/you-resemble-me-poster.jpg" alt="Affiche You Resemble Me" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=PXBm0GYV4Zo" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/diamantino-poster.jpg" alt="Affiche Diamantino" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=ZFsSZcy_NBA" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/dernier-soleil.jpg" alt="Affiche Dernier Soleil" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=mUG3RV-eQ2w" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/merveilles.jpg" alt="Affiche Merveilles à Montfermeil" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=GjHIUBplrUw" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/manodrome-poster.jpg" alt="Affiche Manodrome" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=JS1adp131oE" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/back-to-the-family-poster.jpg" alt="Affiche Back to the Family" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=Kpet4uKoEeY" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/chandelle-poster.jpg" alt="Affiche À la lueur de la chandelle" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=mHFTXh-Lor0" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/en-mille-morceaux-poster.jpg" alt="Affiche En mille morceaux" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=uUKdBCuouqg" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/blockbuster-poster.jpg" alt="Affiche Blockbuster" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=msIwHYFMOes" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/bizarre-poster.jpg" alt="Affiche Bizarre" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=i4zapAP6cAY" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/gold-songs-poster.jpg" alt="Affiche Gold Songs" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=CUAj9Qw_6EI" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/sans-toi-poster.jpg" alt="Affiche Sans Toi" loading="lazy"></a>
+      </div>
+
+      <div class="poster-wall" id="wall-courts" hidden>
+        <img src="assets/wall/la-ligne-de-vie-poster-v3.jpg" alt="Affiche La ligne de vie" loading="lazy">
+        <img src="assets/wall/mardochi-poster.jpg" alt="Affiche Mardochi" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=AWiRa7KZY4U" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/na-marei-poster.jpg" alt="Affiche Na Marei, l'invisible" loading="lazy"></a>
+        <img src="assets/wall/la-grande-ourse-poster.jpg" alt="Affiche La Grande Ourse" loading="lazy">
+        <img src="assets/wall/the-loyal-man-poster.jpg" alt="Affiche The Loyal Man" loading="lazy">
+        <img src="assets/wall/coqueluche-poster.jpg" alt="Affiche Coqueluche" loading="lazy">
+        <img src="assets/wall/homme-sage-poster.jpg" alt="Affiche Homme sage" loading="lazy">
+        <img src="assets/wall/mamina-poster.jpg" alt="Affiche Mamina" loading="lazy">
+        <img src="assets/wall/apnees-poster.jpg" alt="Affiche Apnées" loading="lazy">
+        <img src="assets/wall/simone-est-partie-poster.jpg" alt="Affiche Simone est partie" loading="lazy">
+        <img src="assets/wall/lovena-poster.jpg" alt="Affiche Lovena" loading="lazy">
+        <img src="assets/wall/les-eveillees-poster.jpg" alt="Affiche Les Éveillées" loading="lazy">
+        <img src="assets/wall/particules-fines-poster.jpg" alt="Affiche Particules Fines" loading="lazy">
+        <img src="assets/wall/jeune-fille-de-pierre-poster.jpg" alt="Affiche Les extraordinaires mésaventures de la jeune fille de pierre" loading="lazy">
+        <img src="assets/wall/tigre-poster.jpg" alt="Affiche Tigre" loading="lazy">
+        <img src="assets/wall/little-jaffna-court-poster.jpg" alt="Affiche Little Jaffna" loading="lazy">
+      </div>
+    </div>
+
+    <div class="hero__panel" data-panel="docs" hidden>
+      <div class="poster-wall" id="wall-docs-all">
+        <a href="https://www.youtube.com/watch?v=adUBqIjHyfs" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/dans-la-legende-poster.jpg" alt="Affiche Dans la légende" loading="lazy"></a>
+        <img src="assets/wall/a-la-chaleur-des-annees-froides-poster.jpg" alt="Affiche À la chaleur des années froides" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=iu-W09mkpkg" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/rhino-dollars-poster.jpg" alt="Affiche Rhino Dollars" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=mChWLIxhAko" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/mensonges-histoire-poster.jpg" alt="Affiche Les Mensonges de l'Histoire" loading="lazy"></a>
+        <img src="assets/wall/demain-le-feu-poster.jpg" alt="Affiche Demain le feu" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=AgmxKPY5Vak" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/gadjo-poster.jpg" alt="Affiche Gadjo, un prince chez les Manouches" loading="lazy"></a>
+        <img src="assets/wall/infrarouge-kourtrajme-poster.jpg" alt="Affiche Infrarouge - 365 jours à l'école Kourtrajme" loading="lazy">
+        <a href="https://www.facebook.com/share/v/1BrGLvN4th/" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/retour-nature-sauvage-poster.jpg" alt="Affiche Le retour de la nature sauvage" loading="lazy"></a>
+        <a href="https://www.arte.tv/fr/videos/RC-017955/les-grands-mythes-l-iliade-et-l-odyssee/" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/grands-mythes-poster.jpg" alt="Affiche Les Grands Mythes" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=rFjUl36hky8" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/napoleon-metternich-poster.jpg" alt="Affiche Napoléon Metternich, le commencement de la fin" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=t4LKSFBX9h0" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/yafrica-poster.jpg" alt="Affiche Y'Africa" loading="lazy"></a>
+        <a href="https://youtu.be/odEy0VfVAmo" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/irmas-poster.jpg" alt="Affiche Irmas" loading="lazy"></a>
+        <img src="assets/wall/odyssee-borgey-poster.jpg" alt="Affiche L'Odyssée des Borgey" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=MWEJwTdkI-k" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/maintenant-ou-jamais-poster-v3.jpg" alt="Affiche Maintenant ou Jamais" loading="lazy"></a>
+      </div>
+
+      <div class="poster-wall" id="wall-docs-series" hidden>
+        <a href="https://www.youtube.com/watch?v=adUBqIjHyfs" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/dans-la-legende-poster.jpg" alt="Affiche Dans la légende" loading="lazy"></a>
+        <a href="https://www.facebook.com/share/v/1BrGLvN4th/" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/retour-nature-sauvage-poster.jpg" alt="Affiche Le retour de la nature sauvage" loading="lazy"></a>
+        <a href="https://www.arte.tv/fr/videos/RC-017955/les-grands-mythes-l-iliade-et-l-odyssee/" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/grands-mythes-poster.jpg" alt="Affiche Les Grands Mythes" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=mChWLIxhAko" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/mensonges-histoire-poster.jpg" alt="Affiche Les Mensonges de l'Histoire" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=t4LKSFBX9h0" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/yafrica-poster.jpg" alt="Affiche Y'Africa" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=MWEJwTdkI-k" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/maintenant-ou-jamais-poster-v3.jpg" alt="Affiche Maintenant ou Jamais" loading="lazy"></a>
+      </div>
+
+      <div class="poster-wall" id="wall-docs-unitaire" hidden>
+        <img src="assets/wall/a-la-chaleur-des-annees-froides-poster.jpg" alt="Affiche À la chaleur des années froides" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=iu-W09mkpkg" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/rhino-dollars-poster.jpg" alt="Affiche Rhino Dollars" loading="lazy"></a>
+        <img src="assets/wall/demain-le-feu-poster.jpg" alt="Affiche Demain le feu" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=AgmxKPY5Vak" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/gadjo-poster.jpg" alt="Affiche Gadjo, un prince chez les Manouches" loading="lazy"></a>
+        <img src="assets/wall/infrarouge-kourtrajme-poster.jpg" alt="Affiche Infrarouge - 365 jours à l'école Kourtrajme" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=rFjUl36hky8" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/napoleon-metternich-poster.jpg" alt="Affiche Napoléon Metternich, le commencement de la fin" loading="lazy"></a>
+        <a href="https://youtu.be/odEy0VfVAmo" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/irmas-poster.jpg" alt="Affiche Irmas" loading="lazy"></a>
+        <img src="assets/wall/odyssee-borgey-poster.jpg" alt="Affiche L'Odyssée des Borgey" loading="lazy">
+      </div>
+    </div>
+
+    <div class="hero__panel" data-panel="series" hidden>
+      <div class="poster-wall" id="wall-series">
+        <a href="https://www.youtube.com/watch?v=JJ1NA-L_uRM" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/stalk-poster.jpg" alt="Affiche Stalk, saison 3" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=TV3Xm0Kh2vQ" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/loulou-poster.jpg" alt="Affiche Loulou" loading="lazy"></a>
+        <a href="https://www.youtube.com/watch?v=uvGFTO-DQFg" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/sintonia-poster.jpg" alt="Affiche Sintonia" loading="lazy"></a>
+      </div>
+    </div>
+
+    <div class="hero__panel" data-panel="clips" hidden>
+      <div class="poster-wall" id="wall-clips">
+        <a href="https://www.youtube.com/watch?v=YnYBcbrC35s" target="_blank" rel="noopener" class="poster-link"><img src="assets/wall/mf-clip-poster-v6.jpg" alt="Affiche du clip C'est à qui le tour, Mylène Farmer" loading="lazy"></a>
+      </div>
+      <div class="clip-caption">
+        <h3>C'est à qui le tour</h3>
+        <p class="clip-caption__meta"><span data-en="Music Video">Clip</span> <span class="film__dot">·</span> 2026 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Julia Ducournau</p>
+        <p class="clip-caption__role" data-en="Production Sound Mixer">Chef opérateur du son</p>
+        <p class="clip-caption__note" data-en="Music video for Mylène Farmer — Released June 2026">Clip de Mylène Farmer — Sorti en juin 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="films" id="films">
+    <div class="section__head">
+      <h2 data-en="Recent Work">Dernièrement</h2>
+    </div>
+
+    <div class="films__grid">
+
+      <article class="film">
+        <div class="film__poster film__poster--full">
+          <img src="assets/marie-madeleine-v5.jpg" alt="Affiche du film Marie Madeleine" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>Marie Madeleine</h3>
+          <p class="film__meta"><span data-en="Feature Film">Long métrage</span> <span class="film__dot">·</span> 2026 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Gessica Généus</p>
+          <p class="film__role" data-en="Production Sound Mixer · Supervising Sound Editor">Chef opérateur du son · Chef monteur son</p>
+          <p class="film__badge" data-en="Official Selection — Cannes Première">Sélection Officielle — Cannes Première</p>
+        </div>
+      </article>
+
+      <article class="film film--large">
+        <div class="film__poster">
+          <img src="assets/cest-a-qui-le-tour-featured.jpg" alt="Affiche du clip C'est à qui le tour" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>C'est à qui le tour</h3>
+          <p class="film__meta"><span data-en="Music Video">Clip</span> <span class="film__dot">·</span> 2026 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Julia Ducournau</p>
+          <p class="film__role" data-en="Production Sound Mixer">Chef opérateur du son</p>
+          <p class="film__badge" data-en="Music video for Mylène Farmer — Released June 2026">Clip de Mylène Farmer — Sorti en juin 2026</p>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="film__poster">
+          <img src="assets/la-ligne-de-vie-featured-bataille.jpg" alt="Affiche du film La ligne de Vie" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>La ligne de Vie</h3>
+          <p class="film__meta"><span data-en="Short Film">Court métrage</span> <span class="film__dot">·</span> 2025 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Hugo Becker</p>
+          <p class="film__role" data-en="Supervising Sound Editor">Chef monteur son</p>
+          <p class="film__badge" data-en="Official Selection — Venice Film Festival">Sélection Officielle — Mostra de Venise</p>
+        </div>
+      </article>
+
+      <article class="film film--large">
+        <div class="film__poster">
+          <img src="assets/ka-featured.jpg" alt="Affiche du film KA" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>KA</h3>
+          <p class="film__meta"><span data-en="Feature Film">Long métrage</span> <span class="film__dot">·</span> <span data-en="In post-production">En post-production</span> <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Pedro Peralta</p>
+          <p class="film__role" data-en="Supervising Sound Editor">Chef monteur son</p>
+          <p class="film__badge" data-en="Theatrical release in 2027">Sortie salle en 2027</p>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="film__poster">
+          <img src="assets/maintenant-ou-jamais-featured-v2.jpg" alt="Affiche de la série Maintenant ou Jamais" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>Maintenant ou Jamais</h3>
+          <p class="film__meta">20×30 min · HBO Max <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Ousmane Ly</p>
+          <p class="film__role" data-en="Production Sound Mixer">Chef opérateur du son</p>
+          <p class="film__badge" data-en="Release July 2025">Sortie juillet 2025</p>
+        </div>
+      </article>
+
+      <article class="film film--large">
+        <div class="film__poster">
+          <img src="assets/stalk-featured-v4.jpg" alt="Affiche de la série Stalk, saison 3" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>Stalk</h3>
+          <p class="film__meta film__meta--stack"><span class="film__meta-prefix"><span data-en="Season 3 · 10×30 min · France·tv">Saison 3 · 10×30 min · France·tv</span> <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span></span><span class="film__meta-name">Jean-Charles Paugam<br>et Simon Bouisson</span></p>
+          <p class="film__role" data-en="ADR Sound Engineer">Ingénieur du son post-synchros</p>
+          <p class="film__badge" data-en="Release September 2025">Sortie septembre 2025</p>
+        </div>
+      </article>
+
+      <article class="film">
+        <div class="film__poster">
+          <img src="assets/little-jaffna-web.jpg" alt="Affiche du film Little Jaffna" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>Little Jaffna</h3>
+          <p class="film__meta"><span data-en="Feature Film">Long métrage</span> <span class="film__dot">·</span> 2024 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Lawrence Valin</p>
+          <p class="film__role" data-en="Production Sound Mixer">Chef opérateur du son</p>
+          <p class="film__badge" data-en="Venice Film Festival — Critics' Week">Mostra de Venise — Semaine de la Critique</p>
+        </div>
+      </article>
+
+      <article class="film film--large">
+        <div class="film__poster">
+          <img src="assets/les-meutes.jpg" alt="Affiche du film Les Meutes" loading="lazy">
+        </div>
+        <div class="film__info">
+          <h3>Les Meutes</h3>
+          <p class="film__meta"><span data-en="Feature Film">Long métrage</span> <span class="film__dot">·</span> 2023 <span class="film__dot">·</span> <span data-en="Directed by">Réalisé par</span> Kamal Lazraq</p>
+          <p class="film__role" data-en="Production Sound Mixer · Supervising Sound Editor">Chef opérateur du son · Chef monteur son</p>
+          <p class="film__badge" data-en="Jury Prize — Un Certain Regard, Cannes">Prix du Jury — Un Certain Regard, Cannes</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="filmo" id="filmo">
+    <div class="section__head">
+      <h2 data-en="Filmography">Filmographie</h2>
+    </div>
+
+    <div class="filmo__group">
+      <h3 class="filmo__title" data-en="Feature Films">Longs-métrages</h3>
+      <ul class="filmo__list">
+        <li><span class="filmo__film"><em>Nuit Noire</em> — Nicolas Panay</span><span class="filmo__note" data-en="Shooting January 2027">Tournage Janvier 2027</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Mamina</em> — Massimo Riggi</span><span class="filmo__note" data-en="Shooting summer 2027">Tournage été 2027</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>KA</em> — Pedro Peralta</span><span class="filmo__note" data-en="In post-production">En post-production</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Marie Madeleine</em> — Gessica Généus</span><span class="filmo__note" data-en="Official Selection, Cannes Première 2026">Sélection officielle, Cannes Première 2026</span><span class="filmo__role" data-en="Production Sound Mixer · Supervising Sound Editor">Chef opérateur du son · Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>L'or et le monde</em> — Ico Costa</span><span class="filmo__note" data-en="Theatrical release in 2025">Sortie salle en 2025</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Back to the Family</em> — Sharunas Bartas</span><span class="filmo__note">Rotterdam Film Festival 2025</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>À la lueur de la chandelle</em> — André Gil Mata</span><span class="filmo__note" data-en="Theatrical release in 2025">Sortie salle en 2025</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Little Jaffna</em> — Lawrence Valin</span><span class="filmo__note" data-en="Venice Film Festival, Critics' Week 2024">Mostra de Venise, Semaine de la Critique 2024</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Les Meutes</em> — Kamal Lazraq</span><span class="filmo__note" data-en="Jury Prize, Un Certain Regard, Cannes 2023">Prix du Jury Un Certain Regard, Cannes 2023</span><span class="filmo__role" data-en="Production Sound Mixer · Supervising Sound Editor">Chef opérateur du son · Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Manodrome</em> — John Trengove</span><span class="filmo__note" data-en="Official Competition, Berlinale 2023">Compétition officielle, Berlinale 2023</span><span class="filmo__role" data-en="Sound Editor (additional)">Monteur son (renforts)</span></li>
+        <li><span class="filmo__film"><em>Le Barrage</em> — Ali Cherri</span><span class="filmo__note" data-en="Directors' Fortnight, Cannes 2022">Quinzaine des Réalisateurs, Cannes 2022</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Tu me ressembles</em> — Dina Amer</span><span class="filmo__note" data-en="Giornate degli Autori, Venice Film Festival 2022">Giornate degli Autori, Mostra de Venise 2022</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Sans toi</em> — Sophie Guillemin</span><span class="filmo__note" data-en="Theatrical release in 2021">Sortie salle en 2021</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Freda</em> — Gessica Généus</span><span class="filmo__note">Un Certain Regard, Cannes 2021</span><span class="filmo__role" data-en="Production Sound Mixer · Supervising Sound Editor">Chef opérateur du son · Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Merveilles à Montfermeil</em> — Jeanne Balibar</span><span class="filmo__note" data-en="Theatrical release in 2020">Sortie salle en 2020</span><span class="filmo__role" data-en="Sound Editor (additional)">Monteur son (renforts)</span></li>
+        <li><span class="filmo__film"><em>Dernier Soleil</em> — Étienne Constantinesco</span><span class="filmo__note">Amazon, 2020</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Les Hommes de paille</em> — Jonathan Safir</span><span class="filmo__note" data-en="Theatrical release in 2020">Sortie salle en 2020</span><span class="filmo__role" data-en="Sound Editor">Monteur son</span></li>
+        <li><span class="filmo__film"><em>Un monde ailleurs</em> — Étienne Faure</span><span class="filmo__note" data-en="Theatrical release in 2019">Sortie salle en 2019</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Friday and Friday</em> — Sathapranavan</span><span class="filmo__note" data-en="Theatrical release in 2019">Sortie salle en 2019</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Diamantino</em> — Gabriel Abrantes</span><span class="filmo__note" data-en="Critics' Week, Cannes 2018">Semaine de la Critique, Cannes 2018</span><span class="filmo__role" data-en="ADR Sound Engineer">Ingénieur du son post-synchros</span></li>
+        <li><span class="filmo__film"><em>Blockbuster</em> — July Hygreck</span><span class="filmo__note">Netflix France, 2018</span><span class="filmo__role" data-en="Production Sound Mixer (additional)">Chef opérateur du son (renforts)</span></li>
+        <li><span class="filmo__film"><em>En mille morceaux</em> — Véronique Meriadec</span><span class="filmo__note" data-en="Theatrical release in 2018">Sortie salle en 2018</span><span class="filmo__role" data-en="Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Mémoires du 304</em> — Pascal Luneau</span><span class="filmo__note" data-en="Theatrical release in 2017">Sortie salle en 2017</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Bizarre</em> — Étienne Faure</span><span class="filmo__note">Berlinale Forum, 2015</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+      </ul>
+    </div>
+
+    <div class="filmo__group">
+      <h3 class="filmo__title" data-en="Short Films">Courts-métrages</h3>
+      <ul class="filmo__list">
+        <li><span class="filmo__film"><em>Le poids des mots</em> — Massimo Rigi</span><span class="filmo__note" data-en="In post-production">En post-production</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Pauvres diables</em> — Olivier Sagne</span><span class="filmo__note" data-en="Theatrical release in 2026">Sortie salle en 2026</span><span class="filmo__role" data-en="Sound Mixer">Mixeur</span></li>
+        <li><span class="filmo__film"><em>Mardochi</em> — Lucas Gloppe</span><span class="filmo__note" data-en="International Selection, Clermont-Ferrand Festival 2026">Sélection internationale, Festival de Clermont-Ferrand 2026</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>La ligne de vie</em> — Hugo Becker</span><span class="filmo__note" data-en="Official Competition, Venice Film Festival 2026">Compétition officielle, Mostra de Venise 2026</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>La Grande Ourse</em> — Anthony Bajon</span><span class="filmo__note" data-en="Theatrical release in 2024">Sortie salle en 2024</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Le Soleil dort</em> — Pablo Dury</span><span class="filmo__note" data-en="Nominated for a César, 2024">Nommé aux César 2024</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Simone est partie</em> — Mathilde Chavane</span><span class="filmo__note" data-en="Directors' Fortnight, Cannes 2022">Quinzaine des Réalisateurs, Cannes 2022</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>The Loyal Man</em> — Lawrence Valin</span><span class="filmo__note" data-en="Nominated for a César, 2021">Nommé aux César 2021</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Homme sage</em> — Juliette Denis</span><span class="filmo__note" data-en="Theatrical release in 2020">Sortie salle en 2020</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>In My Room</em> — Mati Diop</span><span class="filmo__note" data-en="Official Selection, Venice Film Festival 2020">Sélection officielle, Mostra de Venise 2020</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film"><em>Lovena</em> — Olivier Sagne</span><span class="filmo__note" data-en="Theatrical release in 2020">Sortie salle en 2020</span><span class="filmo__role" data-en="Sound Mixer">Mixeur</span></li>
+        <li><span class="filmo__film"><em>Little Jaffna</em> — Lawrence Valin</span><span class="filmo__note" data-en="Canal+ Award, Clermont-Ferrand 2019">Prix Canal+, Clermont-Ferrand 2019</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Les extraordinaires mésaventures de la jeune fille de pierre</em> — Gabriel Abrantes</span><span class="filmo__note" data-en="Directors' Fortnight, Cannes 2019">Quinzaine des Réalisateurs, Cannes 2019</span><span class="filmo__role" data-en="ADR Sound Engineer">Ingénieur du son post-synchros</span></li>
+        <li><span class="filmo__film"><em>Coqueluche</em> — Aurélien Peyre</span><span class="filmo__note" data-en="Theatrical release in 2018">Sortie salle en 2018</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+      </ul>
+    </div>
+
+    <div class="filmo__group">
+      <h3 class="filmo__title" data-en="Documentaries">Documentaires</h3>
+      <ul class="filmo__list">
+        <li><span class="filmo__film"><em>The Visionaries by Saint Laurent</em> — Nathalie Canguilhem</span><span class="filmo__note">Amazon, 2026</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>À la chaleur des années froides</em> — Darius Kaufman, Eytan Jan</span><span class="filmo__note">Ciné+, 2023</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>365 jours à l'école</em> — Ladj Ly, Karima Hamzaoui (Kourtrajmé)</span><span class="filmo__note">France 2, 2021</span><span class="filmo__role" data-en="Supervising Sound Editor">Chef monteur son</span></li>
+        <li><span class="filmo__film" data-en="&lt;em&gt;Napoléon-Metternich, The Beginning of the End&lt;/em&gt; — Mathieu Schwartz"><em>Napoléon-Metternich, le commencement de la fin</em> — Mathieu Schwartz</span><span class="filmo__note">ARTE France, 2021</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Y'Africa</em>, saisons 1-2-3 — Dan Assayag</span><span class="filmo__note" data-en="20×26 min, 17 African countries, Orange / ARTE France, 2020">20×26 min, 17 pays d'Afrique, Orange / ARTE France, 2020</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Le Retour de la nature sauvage</em> — Sarah Lainé, Vincent Perazio</span><span class="filmo__note">ARTE France, 3×43 min, 2020</span><span class="filmo__role" data-en="Sound Editor">Monteur son</span></li>
+        <li><span class="filmo__film"><em>Les Mensonges de l'histoire</em></span><span class="filmo__note">7×52 min, RMC Découverte, 2018–2020</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Rhino Dollars</em> — Olivia Mokiejewski</span><span class="filmo__note">ARTE France, 2017</span><span class="filmo__role" data-en="Production Sound Mixer · Sound Editor">Chef opérateur du son · Monteur son</span></li>
+        <li><span class="filmo__film"><em>Les Grands Mythes</em> — François Busnel</span><span class="filmo__note">ARTE France, 20×26 min, 2016</span><span class="filmo__role" data-en="Sound Editor">Monteur son</span></li>
+        <li><span class="filmo__film"><em>Gadgo, un prince chez les manouches</em> — Flora Desprat</span><span class="filmo__note">ARTE France, 2016</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Pianotine</em> — Philippe Ledem</span><span class="filmo__note" data-en="ARTE France, documentary series, 2014">ARTE France, série documentaire, 2014</span><span class="filmo__role" data-en="Production Sound Mixer · Sound Editor">Chef opérateur du son · Monteur son</span></li>
+      </ul>
+    </div>
+
+    <div class="filmo__group">
+      <h3 class="filmo__title" data-en="Series">Séries</h3>
+      <ul class="filmo__list">
+        <li><span class="filmo__film"><em>Maintenant ou Jamais</em> — FC Montfermeil, Ousmane Ly</span><span class="filmo__note" data-en="Release July 2025, HBO Max">Sortie juillet 2025, HBO Max</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+        <li><span class="filmo__film"><em>Stalk</em> (saison 3) — Jean-Charles Paugam, Simon Bouisson</span><span class="filmo__note" data-en="Release September 2025">Sortie septembre 2025</span><span class="filmo__role" data-en="ADR Sound Engineer">Ingénieur du son post-synchros</span></li>
+        <li><span class="filmo__film"><em>Loulou</em> (mini-série) — Alice Vial, Louise Massin</span><span class="filmo__note">ARTE France, 20×7, sortie 2018</span><span class="filmo__role" data-en="Sound Mixer">Mixeur</span></li>
+        <li><span class="filmo__film"><em>Sintonia</em> (saison 3) — Johnny Araújo, Daniela Carvalho</span><span class="filmo__note" data-en="Netflix, 2019">Netflix, 2019</span><span class="filmo__role" data-en="Production Sound Mixer (additional)">Chef opérateur du son (renforts)</span></li>
+      </ul>
+    </div>
+
+    <div class="filmo__group">
+      <h3 class="filmo__title" data-en="Music Video">clip</h3>
+      <ul class="filmo__list">
+        <li><span class="filmo__film"><em>C'est à qui le tour</em> — Julia Ducournau</span><span class="filmo__note" data-en="Music video for Mylène Farmer — June 2026">Clip de Mylène Farmer — juin 2026</span><span class="filmo__role" data-en="Production Sound Mixer">Chef opérateur du son</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="apropos" id="apropos">
+    <div class="section__head">
+      <h2 data-en="About">À propos</h2>
+    </div>
+
+    <div class="apropos__body">
+      <div class="apropos__text">
+        <p data-en="Thomas Van Pottelberge is a sound recordist and sound editor for narrative film and documentary.">
+          Thomas Van Pottelberge est chef opérateur du son et monteur son
+          pour le cinéma de fiction et documentaire.
+        </p>
+        <p data-en="His work includes <em>Les Meutes</em> by Kamal Lazraq, Jury Prize in Un Certain Regard at the 2023 Cannes Film Festival, <em>Marie Madeleine</em> and <em>Freda</em> by Gessica Généus, both presented in Cannes in official selection in 2026 and 2021, <em>Little Jaffna</em> by Lawrence Valin, as well as alongside directors selected in Venice, Berlin and Rotterdam.">
+          Il a notamment travaillé sur <em>Les Meutes</em> de Kamal Lazraq, prix du Jury Un Certain
+          Regard au Festival de Cannes 2023, <em>Marie Madeleine</em> et <em>Freda</em> de Gessica
+          Généus, tous les deux présentés à Cannes en sélection officielle en 2026 et 2021,
+          <em>Little Jaffna</em> de Lawrence Valin, ainsi qu'aux côtés de réalisateurs sélectionnés à
+          Venise, Berlin et Rotterdam.
+        </p>
+      </div>
+      <div class="apropos__photo">
+        <img src="assets/contact-photo.jpg" alt="Thomas Van Pottelberge sur un plateau, avec son matériel de prise de son" loading="lazy">
+      </div>
+    </div>
+
+    <div class="contact__body" id="contact">
+      <div class="contact__primary">
+        <a class="btn btn--mail" href="mailto:tomvanpot@gmail.com">tomvanpot@gmail.com</a>
+        <a class="contact__phone" href="tel:+33672150742">+33.6.72.15.07.42</a>
+        <span class="contact__location">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Paris
+        </span>
+      </div>
+      <div class="contact__links">
+        <a class="btn btn--ghost btn--imdb" href="https://www.imdb.com/fr/name/nm7089662/" target="_blank" rel="noopener">
+          <img src="assets/imdb-logo-v2.png" alt="Profil IMDB">
+        </a>
+        <a class="btn btn--ghost btn--unifrance" href="https://www.unifrance.org/annuaires/personne/404816/thomas-van-pottelberge" target="_blank" rel="noopener">
+          <img src="assets/unifrance-logo.png" alt="Profil Unifrance">
+        </a>
+        <a class="btn btn--ghost btn--instagram" href="https://www.instagram.com/tomvanpot" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div class="contact__affiliations">
+        <p><span data-en="Member of">Membre du</span> <a href="https://www.dadsonstudio.com" target="_blank" rel="noopener">Studio Dadson</a></p>
+        <p><span data-en="Partner of">Partenaire de</span> <a href="https://www.pleineimage-post.com" target="_blank" rel="noopener">Pleine Image Post</a> <span class="film__dot">·</span> <a href="https://dinosaures-sarl.fr" target="_blank" rel="noopener">Dinosaures SARL</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apropos apropos--gallery">
+    <div class="apropos__gallery-section">
+      <h3 class="apropos__gallery-title">Galleries photos</h3>
+      <div class="apropos__gallery" id="apropos-gallery">
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-01.jpg" data-full="assets/gallery/tournage-01-full.jpg" alt="Tournage, équipe technique sous un parapluie de protection" loading="lazy">
+          <figcaption data-en="On the shoot of Marie Madeleine in Jacmel, Haiti, November 2025">Sur le tournage de Marie Madeleine à Jacmel en Haïti, Novembre 2025</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-02.jpg" data-full="assets/gallery/tournage-02-full.jpg" alt="Mixage du film Marie Madeleine en studio" loading="lazy">
+          <figcaption data-en="End of mix of the film &quot;Marie Madeleine&quot; with Jeff Levillain and Jean-Marie Gigon at AGeNT in Brussels">Fin de mixage du film "Marie Madeleine" avec Jeff Levillain et Jean-Marie Gigon chez AGeNT à Bruxelles</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-03.jpg" data-full="assets/gallery/tournage-03-full.jpg" alt="Preneur de son avec une perche, sur un point de vue désertique au Soudan" loading="lazy">
+          <figcaption data-en="On the shoot of the feature film &quot;Le Barrage&quot; by Ali Cherri in Sudan, in the Djebel Barkal desert, 2021">Sur le tournage du long-métrage "Le Barrage" de Ali Cherri au Soudan, dans le désert du Djebel Barkal en 2021</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-04.jpg" data-full="assets/gallery/tournage-04-full.jpg" alt="Équipe de tournage en motoneige dans une forêt enneigée" loading="lazy">
+          <figcaption data-en="Shooting the documentary &quot;L'Odyssée des Borgey&quot; in Swedish Lapland, 2024">Tournage du documentaire "L'odyssée des Borgey" en Laponie suédoise, 2024</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-05.jpg" data-full="assets/gallery/tournage-05-full.jpg" alt="Perchman sur le toit d'un camion de tournage dans une cité" loading="lazy">
+          <figcaption data-en="Shooting the feature film &quot;Little Jaffna&quot; by Lawrence Valin in Paris, October 2023">Tournage du long-métrage "Little Jaffna" de Lawrence Vallin à Paris, Octobre 2023</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-06.jpg" data-full="assets/gallery/tournage-06-full.jpg" alt="Prise de son en extérieur sur une piste en forêt" loading="lazy">
+          <figcaption data-en="Wild sound recording for the feature film &quot;Un Monde Ailleurs&quot; by Étienne Faure in French Guiana, 2019">Prise de sons seuls pour le long-métrage "Un Monde Ailleurs" de Étienne Faure en Guyane Française, 2019</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-07.jpg" data-full="assets/gallery/tournage-07-full.jpg" alt="Équipe de tournage traversant une rivière au bord d'une forêt tropicale" loading="lazy">
+          <figcaption data-en="Shooting the documentary &quot;À la chaleur des années froides&quot; by Darius Kaufman and Eytan Jan in Cuba, 2020">Tournage du documentaire "À la chaleur des années froides" de Darius Kaufman et Eytan Jan à Cuba en 2020</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-08.jpg" data-full="assets/gallery/tournage-08-full.jpg" alt="Chef opérateur du son assis sous un parapluie de protection, avec sa perche" loading="lazy">
+          <figcaption data-en="On the shoot of the short film &quot;Le 4ème singe&quot; by Xing Wang, 2024">Sur le tournage du court-métrage "Le 4ème singe" de Xing Wang, 2024</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-09.jpg" data-full="assets/gallery/tournage-09-full.jpg" alt="Fin de tournage du documentaire Irmas" loading="lazy">
+          <figcaption data-en="End of the shoot for the documentary Irmas, with Marie's sisters across Tanzania, Brazil and the Philippines">Fin de tournage pour le documentaire Irmas avec les sœurs de Marie à travers la Tanzanie, le Brésil et les Philippines</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-10.jpg" data-full="assets/gallery/tournage-10-full.jpg" alt="Équipe technique en contre-jour, avec une perche, lors d'un tournage en extérieur" loading="lazy">
+          <figcaption data-en="On the shoot of &quot;Freda&quot; in Port-au-Prince, Haiti, 2019">Sur le tournage de "Freda" à Port au Prince en Haïti en 2019</figcaption>
+        </figure>
+        <figure class="apropos__gallery-item">
+          <img src="assets/gallery/tournage-11.jpg" data-full="assets/gallery/tournage-11-full.jpg" alt="Chef opérateur du son au retour son, en studio" loading="lazy">
+          <figcaption data-en="On the shoot of &quot;Little Jaffna&quot; by Lawrence Valin in Paris, October 2024">Sur le tournage de "Little Jaffna" de Lawrence Vallin à Paris, Octobre 2024</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Thomas Van Pottelberge</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Photo précédente">&#8249;</button>
+  <div class="lightbox__stage">
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
+  <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Photo suivante">&#8250;</button>
+</div>
+
+<div class="video-lightbox" id="videoLightbox" hidden>
+  <button type="button" class="lightbox__close" id="videoLightboxClose" aria-label="Fermer">&times;</button>
+  <div class="video-lightbox__stage">
+    <div class="video-lightbox__frame">
+      <iframe id="videoLightboxIframe" src="" title="Bande-annonce" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
