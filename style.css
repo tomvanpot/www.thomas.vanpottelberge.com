@@ -145,7 +145,7 @@ body {
   text-transform: uppercase;
   color: var(--ink);
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 0.85;
   transition: opacity 0.25s ease, color 0.25s ease;
 }
 
@@ -156,7 +156,7 @@ body {
 
 .nav__lang-btn.is-active {
   opacity: 1;
-  color: var(--accent);
+  color: #ecdab5;
 }
 
 /* ---------- hero ---------- */
