@@ -197,7 +197,10 @@ if (navFilmsLink) {
 
 const navNameLink = document.getElementById('navNameLink');
 if (navNameLink) {
-  navNameLink.addEventListener('click', resetToHome);
+  navNameLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 // --- Hero tabs: Longs-métrages / Courts-métrages (Cinéma only) ---
