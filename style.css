@@ -82,7 +82,7 @@ body {
 .nav__id {
   position: absolute;
   left: 50%;
-  top: 46%;
+  top: 47.5%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ body {
 
 .nav__lang-btn.is-active {
   opacity: 1;
-  color: #ecdab5;
+  color: #d4b17e;
 }
 
 /* ---------- hero ---------- */
