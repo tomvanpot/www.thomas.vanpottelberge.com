@@ -21,7 +21,7 @@ body {
   background:
     radial-gradient(ellipse 90% 55% at 50% 0%, rgba(205, 217, 230, 0.1), transparent 62%),
     linear-gradient(180deg, rgba(8, 8, 10, 0.45) 0%, rgba(8, 8, 10, 0.55) 100%),
-    url("assets/site-bg-grunge2.jpg");
+    url("assets/site-bg-teal.jpg");
   background-size: auto, auto, cover;
   background-position: center, center, center;
   background-attachment: fixed, fixed, fixed;
